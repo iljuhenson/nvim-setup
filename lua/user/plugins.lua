@@ -32,4 +32,12 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
 -- Project Tree View setup end
 
+-- Searching files by names and content start
+Plug 'nvim-lua/plenary.nvim'
+Plug('nvim-telescope/telescope.nvim', { ['tag']= '0.1.8' })
+-- Searching files by names and content end
+
+-- Context(class, functions, modules) start
+Plug 'wellle/context.vim'
+-- Context(class, functions, modules) end
 vim.call('plug#end')
