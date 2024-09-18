@@ -40,4 +40,9 @@ Plug('nvim-telescope/telescope.nvim', { ['tag']= '0.1.8' })
 -- Context(class, functions, modules) start
 Plug 'wellle/context.vim'
 -- Context(class, functions, modules) end
+
+-- Switching between files start
+Plug 'nvim-lua/plenary.nvim'
+Plug 'ThePrimeagen/harpoon'
+-- Switching between files end
 vim.call('plug#end')
