@@ -34,7 +34,7 @@ Plug 'nvim-tree/nvim-web-devicons'
 
 -- Searching files by names and content start
 Plug 'nvim-lua/plenary.nvim'
-Plug('nvim-telescope/telescope.nvim', { ['tag']= '0.1.8' })
+Plug('nvim-telescope/telescope.nvim', { ['branch'] = 'harpoon2' })
 -- Searching files by names and content end
 
 -- Context(class, functions, modules) start
@@ -45,4 +45,9 @@ Plug 'wellle/context.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'ThePrimeagen/harpoon'
 -- Switching between files end
+
+-- Git integration start
+Plug 'tpope/vim-fugitive'
+-- Git integration end
+
 vim.call('plug#end')

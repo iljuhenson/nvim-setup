@@ -12,6 +12,7 @@ vim.wo.relativenumber = true
 -- PROJECT TREE VIEW SETUP
 require("nvim-tree").setup({
 	on_attach = CustomNvimTreeOnAttach,
+	view = {relativenumber = true}
 })
 require'nvim-web-devicons'.setup {
  default = true;

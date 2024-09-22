@@ -54,3 +54,15 @@ require('lspconfig')['gopls'].setup {
 require('lspconfig')['lua_ls'].setup {
   capabilities = capabilities
 }
+
+require('lspconfig')['solargraph'].setup {
+  capabilities = capabilities
+}
+
+require('mason-lspconfig').setup {
+	ensure_isntalled = {
+		'gopls',
+		'lua_ls',
+		'solargraph'
+	}
+}
