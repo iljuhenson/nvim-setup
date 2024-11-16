@@ -11,9 +11,11 @@ return {
 			'hrsh7th/nvim-cmp',
 			'hrsh7th/cmp-vsnip',
 			'hrsh7th/vim-vsnip',
+			'nvim-java/nvim-java',
 		},
 
 		config = function ()
+			require('java').setup()
 			require("mason").setup()
 			require("mason-lspconfig").setup({
 				automatic_installation = true
