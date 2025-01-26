@@ -1,34 +1,34 @@
 return {
-	{
-		'nvim-tree/nvim-tree.lua',
-		dependencies = {
-			'nvim-tree/nvim-web-devicons',
-		},
+  {
+    'nvim-tree/nvim-tree.lua',
+    dependencies = {
+      'nvim-tree/nvim-web-devicons',
+    },
 
-		config = function ()
-			function CustomNvimTreeOnAttach(bufnr)
-				local api = require("nvim-tree.api")
+    config = function()
+      function CustomNvimTreeOnAttach(bufnr)
+        local api = require("nvim-tree.api")
 
-				api.config.mappings.default_on_attach(bufnr)
+        api.config.mappings.default_on_attach(bufnr)
 
-				vim.keymap.set('n', '<Leader>e', api.tree.toggle)
-			end
+        vim.keymap.set('n', '<Leader>e', api.tree.toggle)
+      end
 
-			require("nvim-tree").setup({
-				on_attach = CustomNvimTreeOnAttach,
-				view = {
-					relativenumber = true,
-					width = 50,
-				},
-				renderer = {
-					group_empty = true,
-				},
-				filters = {
-					git_ignored = false,
-				}
-			})
+      require("nvim-tree").setup({
+        on_attach = CustomNvimTreeOnAttach,
+        view = {
+          relativenumber = true,
+          width = 50,
+        },
+        renderer = {
+          group_empty = true,
+        },
+        filters = {
+          git_ignored = false,
+        }
+      })
 
-			vim.g.nvim_tree_group_empty = 1
-		end
-	}
+      vim.g.nvim_tree_group_empty = 1
+    end
+  }
 }
